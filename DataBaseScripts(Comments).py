@@ -144,7 +144,7 @@ def aggregateFlows(df):
     Groups packets into flows and extracts ML features for intrusion detection.
     
     This is the core feature engineering function that creates the dataset
-    your model (Santi's part) will train on.
+    the model will train on.
     
     Features extracted:
     - Packet count per flow
@@ -213,7 +213,7 @@ def labelFromFilename(filename):
     """
     Automatically labels flows based on the input pcap filename.
     
-    Naming convention for Karla's packet generator:
+    Naming convention for the packet generator:
     - Files with "normal" in name → Normal traffic
     - Files with "malicious" in name → Malicious traffic
     
@@ -286,4 +286,5 @@ def main():
     print(f"  Features extracted: {len(flows.columns) - 2}")  # Exclude flow_id and label
 
 if __name__ == "__main__":
+
     main()
