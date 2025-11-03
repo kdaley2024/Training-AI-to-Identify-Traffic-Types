@@ -7,7 +7,7 @@ Computer Networks Project done by Ioannis, Santiago and Karla
 sudo tshark -i lo0 -w out.pcap
 ```
 
-### 
+### Start a local HTTP server bound to loopback
 ```bash
 python3 -m http.server 8000 --bind 127.0.0.1
 ```
