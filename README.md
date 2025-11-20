@@ -17,7 +17,11 @@ sudo tshark -i lo0 -w out.pcap
 ### Example commands
 ```bash
 sudo -E .venv/bin/python3 generator.py --iface lo0 web --dst 127.0.0.1 --dport 8000 --count 3
+```
+```bash
 sudo -E .venv/bin/python3 generator.py --iface lo0 scan --dst 127.0.0.1 --ports 1499-1505 --rate 200
+```
+```bash
 sudo -E .venv/bin/python3 generator.py --iface lo0 burst --dst 127.0.0.1 --dport 9999 --pps 1500 --seconds 2
 ```
 
