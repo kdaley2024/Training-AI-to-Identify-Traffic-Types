@@ -23,7 +23,7 @@ sudo -E .venv/bin/python3 generator.py --iface lo0 burst --dst 127.0.0.1 --dport
 
 ### 
 ```bash
-python3 detector.py --pcap out.pcap --csv flows.csv
+sudo python3 detector.py --pcap out.pcap --csv flows.csv
 ```
 
 ### 
