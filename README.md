@@ -24,6 +24,10 @@ sudo -E .venv/bin/python3 generator.py --iface lo0 scan --dst 127.0.0.1 --ports 
 ```bash
 sudo -E .venv/bin/python3 generator.py --iface lo0 burst --dst 127.0.0.1 --dport 9999 --pps 1500 --seconds 2
 ```
+### Normal
+```bash
+python3 generator.py normal --dst 127.0.0.1 --dport 8000 --count 3 --name example.com
+```
 
 ### When creating the pcap file in the venv using sudo, to allow permissions, run
 ### To avoid this, do not start the tshark capture with 'sudo'
