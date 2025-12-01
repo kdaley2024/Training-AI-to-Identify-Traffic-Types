@@ -3,6 +3,13 @@ Computer Networks Project done by Ioannis, Santiago and Karla
 
 ## Synthetic Packet Generator and Offline Detection Script
 
+### Requirements
+
+```bash
+scapy
+numpy
+```
+
 ### Minimal Test with loopback
 ### Start a local HTTP server bound to loopback
 ```bash
