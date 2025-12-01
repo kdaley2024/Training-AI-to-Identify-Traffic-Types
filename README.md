@@ -8,6 +8,7 @@ Computer Networks Project done by Ioannis, Santiago and Karla
 ```bash
 scapy
 numpy
+pandas
 ```
 
 ### Minimal Test with loopback
