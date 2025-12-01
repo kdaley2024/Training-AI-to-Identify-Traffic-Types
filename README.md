@@ -28,7 +28,7 @@ tshark -i lo0 -w out.pcap
 
 ### UDP burst
 ```bash
-sudo -E python3 generator.py --iface lo0 burst --dst 127.0.0.1 --dport 9999 --pps 200 --seconds 0.1
+sudo -E python3 generator.py --iface lo0 burst --dst 127.0.0.1 --dport 9999 --pps 200 --seconds 1
 ```
 ### Abnormal large payload scripts
 ```bash
