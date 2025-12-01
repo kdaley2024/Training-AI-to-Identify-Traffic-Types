@@ -26,7 +26,7 @@ sudo -E .venv/bin/python3 generator.py --iface lo0 burst --dst 127.0.0.1 --dport
 ```
 ### Normal
 ```bash
-python3 generator.py normal --dst 127.0.0.1 --dport 8000 --count 3 --name example.com
+sudo -E python3 generator.py --iface lo0 dns --dst 127.0.0.1 --name example.com
 ```
 
 ### When creating the pcap file in the venv using sudo, to allow permissions, run
