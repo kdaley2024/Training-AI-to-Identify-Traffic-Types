@@ -36,7 +36,7 @@ sudo -E python3 generator.py --iface lo0 abnsize --dst 127.0.0.1 --dport 8000 --
 ```
 ### SYN flood
 ```bash
-sudo -E python3 generator.py --iface lo0 synflood --dst 127.0.0.1 --dport 8000 --pps 100 --seconds 0.2
+sudo -E python3 generator.py --iface lo0 synflood --dst 127.0.0.1 --dport 8000 --pps 100 --seconds 1
 ```
 ### SYN port scan
 ```bash
