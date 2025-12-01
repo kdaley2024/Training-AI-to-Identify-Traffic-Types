@@ -8,7 +8,7 @@ import numpy as np
 packetConditions = [
     "frame.number", "frame.time_epoch", "ip.src", "ip.dst",
     "tcp.srcport", "tcp.dstport", "udp.srcport", "udp.dstport",
-    "frame.len", "_ws.col.Protocol", "tcp.flags"
+    "frame.len", "frame.protocols", "tcp.flags"
 ]
 
 def runTshark(pcapPath, outCSV):
@@ -21,7 +21,7 @@ def runTshark(pcapPath, outCSV):
         "tshark", "-r", pcapPath, "-T", "fields",
         "-e", "frame.number", "-e", "frame.time_epoch", "-e", "ip.src", "-e", "ip.dst",
         "-e", "tcp.srcport", "-e", "tcp.dstport", "-e", "udp.srcport", "-e", "udp.dstport",
-        "-e", "frame.len", "-e", "_ws.col.Protocol", "-e", "tcp.flags",
+        "-e", "frame.len", "-e", "frame.protocols", "-e", "tcp.flags",
         "-E", "header=y", "-E", "separator=,", "-E", "quote=d"
     ]
 
@@ -44,7 +44,7 @@ def normalizePorts(row):
     return pd.Series({'srcport': srcPort, 'dstport': dstPort})
 
 def buildFlowID(row):
-    return f"{row['ip.src']}-{row['ip.dst']}-{row['srcport']}-{row['dstport']}-{row['_ws.col.Protocol']}"
+    return f"{row['ip.src']}-{row['ip.dst']}-{row['srcport']}-{row['dstport']}-{row['frame.protocols']}"
 
 def parseTCPFlags(df):
     def extract_flags(flag_val):
