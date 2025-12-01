@@ -28,7 +28,7 @@ tshark -i lo0 -w out.pcap
 
 ### UDP burst
 ```bash
-sudo -E python3 generator.py --iface lo0 burst --dst 127.0.0.1 --dport 9999 --pps 2000 --seconds 3
+sudo -E python3 generator.py --iface lo0 burst --dst 127.0.0.1 --dport 9999 --pps 200 --seconds 0.1
 ```
 ### Abnormal large payload scripts
 ```bash
@@ -36,11 +36,11 @@ sudo -E python3 generator.py --iface lo0 abnsize --dst 127.0.0.1 --dport 8000 --
 ```
 ### SYN flood
 ```bash
-sudo -E python3 generator.py --iface lo0 synflood --dst 127.0.0.1 --dport 80 --pps 500 --seconds 3
+sudo -E python3 generator.py --iface lo0 synflood --dst 127.0.0.1 --dport 8000 --pps 100 --seconds 0.2
 ```
 ### SYN port scan
 ```bash
-sudo -E python3 generator.py --iface lo0 scan --dst 127.0.0.1 --ports 1-200 --rate 300
+sudo -E python3 generator.py --iface lo0 scan --dst 127.0.0.1 --ports 1500-1519 --rate 200
 ```
 ## Normal
 
@@ -50,7 +50,7 @@ sudo -E python3 generator.py --iface lo0 dns --dst 127.0.0.1 --name example.com
 ```
 ### Web(HTTP-like)
 ```bash
-sudo -E python3 generator.py --iface lo0 web --dst 127.0.0.1 --dport 8000 --count 3
+sudo -E python3 generator.py --iface lo0 web --dst 127.0.0.1 --dport 8000 --count 20
 ```
 
 
